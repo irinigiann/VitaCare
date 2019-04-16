@@ -1,0 +1,122 @@
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import java.awt.Font;
+import javax.swing.JTextField;
+import javax.swing.ImageIcon;
+import java.awt.Color;
+import javax.swing.JButton;
+import java.awt.SystemColor;
+import javax.swing.JCheckBox;
+import javax.swing.JToggleButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+public class Login {
+
+	private JFrame frame;
+	private JTextField textField;
+	private JTextField textField_1;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Login window = new Login();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public Login() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame();
+		frame.setBounds(100, 100, 564, 352);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(null);
+		
+		JLabel lblNewLabel = new JLabel("Login");
+		lblNewLabel.setForeground(Color.DARK_GRAY);
+		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 22));
+		lblNewLabel.setBounds(36, 28, 59, 27);
+		frame.getContentPane().add(lblNewLabel);
+		
+		textField = new JTextField();
+		textField.setBounds(108, 79, 172, 27);
+		frame.getContentPane().add(textField);
+		textField.setColumns(10);
+		
+		JLabel lblNewLabel_1 = new JLabel("e-mail :");
+		lblNewLabel_1.setForeground(Color.DARK_GRAY);
+		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 13));
+		lblNewLabel_1.setBounds(36, 88, 46, 14);
+		frame.getContentPane().add(lblNewLabel_1);
+		
+		JLabel lblPassword = new JLabel("Password :");
+		lblPassword.setForeground(Color.DARK_GRAY);
+		lblPassword.setFont(new Font("Tahoma", Font.PLAIN, 13));
+		lblPassword.setBounds(36, 135, 71, 14);
+		frame.getContentPane().add(lblPassword);
+		
+		textField_1 = new JTextField();
+		textField_1.setColumns(10);
+		textField_1.setBounds(108, 128, 172, 27);
+		frame.getContentPane().add(textField_1);
+		
+		JLabel label = new JLabel("");
+		label.setIcon(new ImageIcon("C:\\Users\\Ina\\Desktop\\icon\\71f46f5f-79b7-47dd-8b97-ffe83bb5e703.png"));
+		label.setBounds(318, 70, 200, 150);
+		frame.getContentPane().add(label);
+		
+		JButton btnNewButton = new JButton("Login");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				
+				MainScreen nw = new MainScreen();
+				nw.NewScreen();
+			}
+		});
+		btnNewButton.setBackground(SystemColor.textHighlight);
+		btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		btnNewButton.setForeground(Color.BLACK);
+		btnNewButton.setBounds(108, 193, 71, 27);
+		frame.getContentPane().add(btnNewButton);
+		
+		JCheckBox chckbxNewCheckBox = new JCheckBox("Keep me logged in");
+		chckbxNewCheckBox.setForeground(Color.DARK_GRAY);
+		chckbxNewCheckBox.setBounds(93, 163, 113, 23);
+		frame.getContentPane().add(chckbxNewCheckBox);
+		
+		JLabel lblForgotPassword = new JLabel("Forgot Password?");
+		lblForgotPassword.setForeground(SystemColor.textHighlight);
+		lblForgotPassword.setBounds(212, 166, 96, 14);
+		frame.getContentPane().add(lblForgotPassword);
+		
+		JLabel lblSignUp = new JLabel("Sign Up");
+		lblSignUp.setForeground(SystemColor.textHighlight);
+		lblSignUp.setBounds(218, 54, 46, 14);
+		frame.getContentPane().add(lblSignUp);
+		
+		JLabel lblYoureNew = new JLabel("You're new?");
+		lblYoureNew.setForeground(Color.DARK_GRAY);
+		lblYoureNew.setFont(new Font("Tahoma", Font.PLAIN, 11));
+		lblYoureNew.setBounds(153, 54, 71, 14);
+		frame.getContentPane().add(lblYoureNew);
+	}
+}
