@@ -29,7 +29,7 @@ public class camera {
 	}
 
 	/**
-	 * Create the application.
+	 * Create the application
 	 */
 	public camera() {
 		initialize();
