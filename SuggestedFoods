@@ -1,5 +1,7 @@
 import java.awt.EventQueue;
 
+import java.awt.Image;
+
 import javax.swing.JFrame;
 import javax.swing.JToolBar;
 import javax.swing.JScrollPane;
@@ -14,18 +16,18 @@ import javax.swing.JScrollBar;
 import javax.swing.JList;
 import javax.swing.JSeparator;
 
-public class Icons {
+public class NEWICONS {
 
 	private JFrame frame;
 
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
+	public static void NewScreen() {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Icons window = new Icons();
+					NEWICONS window = new NEWICONS();
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -37,7 +39,7 @@ public class Icons {
 	/**
 	 * Create the application.
 	 */
-	public Icons() {
+	public NEWICONS() {
 		initialize();
 	}
 
@@ -66,22 +68,26 @@ public class Icons {
 		frame.getContentPane().add(lblFat);
 		
 		JLabel label = new JLabel("");
-		label.setIcon(new ImageIcon("C:\\Users\\Ina\\Desktop\\icon\\spaghetti.png"));
+		Image img = new ImageIcon(this.getClass().getResource("/spaghetti.png")).getImage();
+		label.setIcon(new ImageIcon(img));
 		label.setBounds(99, 55, 70, 55);
 		frame.getContentPane().add(label);
 		
 		JLabel label_1 = new JLabel("");
-		label_1.setIcon(new ImageIcon("C:\\Users\\Ina\\Desktop\\icon\\salmon.png"));
+		Image img1 = new ImageIcon(this.getClass().getResource("/salmon.png")).getImage();
+		label_1.setIcon(new ImageIcon(img1));
 		label_1.setBounds(212, 40, 70, 70);
 		frame.getContentPane().add(label_1);
 		
 		JLabel label_2 = new JLabel("");
-		label_2.setIcon(new ImageIcon("C:\\Users\\Ina\\Desktop\\icon\\fried-egg (1).png"));
+		Image img2 = new ImageIcon(this.getClass().getResource("/fried-egg (1).png")).getImage();
+		label_2.setIcon(new ImageIcon(img2));
 		label_2.setBounds(326, 40, 70, 70);
 		frame.getContentPane().add(label_2);
 		
 		JLabel label_3 = new JLabel("");
-		label_3.setIcon(new ImageIcon("C:\\Users\\Ina\\Desktop\\icon\\turkey.png"));
+		Image img3 = new ImageIcon(this.getClass().getResource("/turkey.png")).getImage();
+		label_3.setIcon(new ImageIcon(img3));
 		label_3.setBounds(449, 55, 70, 55);
 		frame.getContentPane().add(label_3);
 		
@@ -171,22 +177,25 @@ public class Icons {
 		frame.getContentPane().add(lblg_10);
 		
 		JLabel label_4 = new JLabel("");
-		label_4.setIcon(new ImageIcon("C:\\Users\\Ina\\Desktop\\icon\\apple (1).png"));
+		Image img4 = new ImageIcon(this.getClass().getResource("/apple (1).png")).getImage();
+		label_4.setIcon(new ImageIcon(img4));
 		label_4.setBounds(99, 244, 60, 64);
 		frame.getContentPane().add(label_4);
 		
 		JLabel label_5 = new JLabel("");
-		label_5.setIcon(new ImageIcon("C:\\Users\\Ina\\Desktop\\icon\\baguette (2).png"));
-		label_5.setBounds(212, 244, 77, 64);
+		Image img5 = new ImageIcon(this.getClass().getResource("/baguette (2).png")).getImage();
+		label_5.setIcon(new ImageIcon(img5));		label_5.setBounds(212, 244, 77, 64);
 		frame.getContentPane().add(label_5);
 		
 		JLabel lblNewLabel_1 = new JLabel("New label");
-		lblNewLabel_1.setIcon(new ImageIcon("C:\\Users\\Ina\\Desktop\\icon\\carrot (1).png"));
+		Image img6 = new ImageIcon(this.getClass().getResource("/carrot (1).png")).getImage();
+		lblNewLabel_1.setIcon(new ImageIcon(img6));		
 		lblNewLabel_1.setBounds(326, 244, 70, 64);
 		frame.getContentPane().add(lblNewLabel_1);
 		
 		JLabel lblNewLabel_2 = new JLabel("\r\n");
-		lblNewLabel_2.setIcon(new ImageIcon("C:\\Users\\Ina\\Desktop\\icon\\orange (1).png"));
+		Image img7 = new ImageIcon(this.getClass().getResource("/orange (1).png")).getImage();
+		lblNewLabel_2.setIcon(new ImageIcon(img7));
 		lblNewLabel_2.setBounds(453, 244, 66, 64);
 		frame.getContentPane().add(lblNewLabel_2);
 		
